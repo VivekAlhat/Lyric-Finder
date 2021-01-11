@@ -1,0 +1,10 @@
+.trackContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.tracklist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
