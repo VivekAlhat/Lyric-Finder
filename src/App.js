@@ -3,6 +3,7 @@ import { Provider } from "./context";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Nav from "./Components/layout/Navbar";
 import Home from "./Components/layout/Home";
+import Lyrics from "./Components/chart/Lyrics";
 import "./App.css";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <div className="container">
             <Switch>
               <Route exact path="/" component={Home} />
+              <Route exact path="/lyrics/:artist/:track" component={Lyrics} />
             </Switch>
           </div>
         </React.Fragment>

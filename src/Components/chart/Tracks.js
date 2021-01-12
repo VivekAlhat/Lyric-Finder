@@ -21,7 +21,12 @@ class Tracks extends Component {
                 <CardColumns>
                   {track_list.map((t, index) =>
                     index < 10 ? (
-                      <Song name={t.name} artist={t.artist.name} />
+                      <Song
+                        key={t.track.track_id}
+                        name={t.track.track_name}
+                        album={t.track.album_name}
+                        artist={t.track.artist_name}
+                      />
                     ) : (
                       ""
                     )

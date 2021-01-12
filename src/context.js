@@ -16,10 +16,13 @@ export class Provider extends Component {
 
   componentDidMount() {
     Axios.get(
-      `http://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&api_key=${env.LASTFM_API_KEY}&format=json`
+      `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/chart.tracks.get?chart_name=hot&page=1&page_size=10&country=us&f_has_lyrics=1&apikey=${env.API_KEY}`
     )
       .then((res) => {
-        this.setState({ track_list: res.data.tracks.track, loading: false });
+        this.setState({
+          track_list: res.data.message.body.track_list,
+          loading: false,
+        });
       })
       .catch((err) => console.log(err));
   }

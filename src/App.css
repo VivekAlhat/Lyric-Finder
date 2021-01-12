@@ -8,3 +8,18 @@
   justify-content: center;
   align-items: center;
 }
+
+.track {
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+}
+
+.icon {
+  font-size: 1.3rem;
+  margin-right: 15px;
+}
+
+.lyrics {
+  margin-top: 15px;
+}
