@@ -4,12 +4,25 @@ import env from "react-dotenv";
 
 const Context = React.createContext();
 
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "SEARCH_TRACKS":
+      return {
+        ...state,
+        track_list: action.payload,
+      };
+    default:
+      return state;
+  }
+};
+
 export class Provider extends Component {
   constructor(props) {
     super(props);
     this.state = {
       track_list: [],
       loading: true,
+      dispatch: (action) => this.setState((state) => reducer(state, action)),
     };
   }
 

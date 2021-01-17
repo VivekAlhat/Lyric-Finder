@@ -1,6 +1,6 @@
 import { Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import Search from "./Search";
+import Search from "../chart/Search";
 
 const Nav = () => {
   return (

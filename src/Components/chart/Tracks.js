@@ -15,7 +15,7 @@ class Tracks extends Component {
               <div className="my-3">
                 <Loading />
               </div>
-            ) : (
+            ) : track_list.length > 0 ? (
               <div className="trackContainer">
                 <CardColumns>
                   {track_list.map((t, index) =>
@@ -32,6 +32,13 @@ class Tracks extends Component {
                     )
                   )}
                 </CardColumns>
+              </div>
+            ) : (
+              <div className="trackContainer">
+                <p>
+                  Nothing returned from API, please refresh the page and try
+                  again!
+                </p>
               </div>
             );
           }}
