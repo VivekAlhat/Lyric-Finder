@@ -30,9 +30,9 @@ const Song = (props) => {
           </div>
         </div>
       </Card.Body>
-      <Card.Footer>
-        <Link to={`lyrics/${props.artist}/${props.name}`}>
-          <Button variant="outline-secondary" size="sm" className="w-100">
+      <Card.Footer className="footer-btn">
+        <Link to={`${props.artist}/${props.name}`}>
+          <Button variant="outline-dark" size="sm" className="w-100">
             View lyrics
           </Button>
         </Link>

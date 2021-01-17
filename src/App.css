@@ -20,6 +20,18 @@
   margin-right: 15px;
 }
 
-.lyrics {
-  margin-top: 15px;
+#responsive-navbar-nav {
+  justify-content: flex-end;
+}
+
+@media only screen and (max-width: 600px) {
+  .searchForm {
+    margin: 10px 0;
+    justify-content: center;
+  }
+
+  .submit-btn {
+    margin: 10px 0;
+    width: 100%;
+  }
 }

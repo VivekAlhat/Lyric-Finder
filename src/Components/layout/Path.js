@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Path = (props) => {
   return (
     <Breadcrumb>
-      <Breadcrumb.Item>
+      <Breadcrumb.Item active>
         <Link to="/">Home</Link>
       </Breadcrumb.Item>
       <Breadcrumb.Item active>{props.artist}</Breadcrumb.Item>

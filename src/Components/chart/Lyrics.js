@@ -23,21 +23,27 @@ export default class Lyrics extends Component {
 
   render() {
     return (
-      <div className="lyrics">
+      <div className="lyrics text-center">
         <Path
           artist={this.props.match.params.artist}
           track={this.props.match.params.track}
         />
-        <h3 style={{ fontWeight: "bold", textTransform: "capitalize" }}>
-          {this.props.match.params.track}
-        </h3>
-        <p>{this.props.match.params.artist}</p>
+
+        <div>
+          <h3 style={{ fontWeight: "bold", textTransform: "capitalize" }}>
+            {this.props.match.params.track}
+          </h3>
+          <p style={{ fontWeight: "bold" }}>{this.props.match.params.artist}</p>
+        </div>
+
         {this.state.loading ? (
           <Loading />
         ) : this.state.lyrics.lyrics === "" ? (
           <p>Lyrics not available.</p>
         ) : (
-          <p>{this.state.lyrics.lyrics}</p>
+          this.state.lyrics.lyrics
+            .split("\n")
+            .map((t, index) => <p key={index}>{t}</p>)
         )}
       </div>
     );

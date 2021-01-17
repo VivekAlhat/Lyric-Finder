@@ -10,14 +10,13 @@ class Tracks extends Component {
       <div className="tracklist">
         <Consumer>
           {(value) => {
-            const { track_list, heading, loading } = value;
+            const { track_list, loading } = value;
             return loading ? (
               <div className="my-3">
                 <Loading />
               </div>
             ) : (
               <div className="trackContainer">
-                <h3 className="text-center my-3">{heading}</h3>
                 <CardColumns>
                   {track_list.map((t, index) =>
                     index < 10 ? (
@@ -26,6 +25,7 @@ class Tracks extends Component {
                         name={t.track.track_name}
                         album={t.track.album_name}
                         artist={t.track.artist_name}
+                        id={t.track.track_id}
                       />
                     ) : (
                       ""

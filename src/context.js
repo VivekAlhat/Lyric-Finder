@@ -9,7 +9,6 @@ export class Provider extends Component {
     super(props);
     this.state = {
       track_list: [],
-      heading: "Top Trending",
       loading: true,
     };
   }

@@ -12,10 +12,10 @@ function App() {
       <Router>
         <React.Fragment>
           <Nav />
-          <div className="container">
+          <div className="container home">
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route exact path="/lyrics/:artist/:track" component={Lyrics} />
+              <Route exact path="/:artist/:track" component={Lyrics} />
             </Switch>
           </div>
         </React.Fragment>
